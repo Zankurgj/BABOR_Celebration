@@ -1,0 +1,819 @@
+*
+  box-sizing: border-box 
+* 
+  box-sizing: initial 
+  
+@font-face 
+  font-family: 'Arial'
+  src: url('../fonts/Arial-Regular.woff') format('woff')
+  font-weight: 400
+  font-style: normal
+  font-display: swap
+
+@font-face 
+  font-family: 'Arial'
+  src: url('../fonts/Arial-Bold.woff') format('woff')
+  font-weight: 700
+  font-style: normal
+  font-display: swap
+  
+// Временно для соответствия макету обнулены отступы у body
+body    
+  margin: 0
+  padding: 0
+.bc 
+  & *  
+  font-family: Arial
+  font-weight: 400
+  margin: 0
+  padding: 0
+  & .hr
+    height: 1px
+    background: #000
+  & a
+    text-decoration: none
+  &-title    
+    margin-bottom: 20px
+    text-transform: uppercase
+    font-size: calc(28px + 22 * ((100vw - 375px) / (1440 - 375)))
+    line-height: 124%
+    font-family: 'Arial'
+  &-text
+    font-family: 'Arial'
+    margin-bottom: 20px
+    font-size: calc(16px + 6 * ((100vw - 375px) / (1440 - 375)))
+    line-height: 145%
+  &-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 290px
+    height: 37px
+    padding: 10px
+    font-size: 15px
+    line-height: 17.25px
+    text-transform: uppercase
+    text-decoration: none
+    color: #fff
+    background: #000
+    &__img
+      width: 15px
+      height: 17.25px
+      margin-left: 11px
+    &--buy
+      width: 182px
+      height: 30px
+  &-time
+    display: flex
+    &__title
+      text-align: center
+      margin-bottom: 0
+    &__text
+      text-align: center
+    &__img
+      &-1    
+        width: 100%
+        height: auto
+      &-2
+        display: none
+    &__first      
+      position: relative
+      width: 56.5vw
+      height: 458px
+      object-fit: cover
+      background-image: url(../img/bc-time__img-1.png)
+      background-repeat: no-repeat   
+      background-size: auto calc(32vw-150)
+    &__second
+      width: 50vw
+      height: calc(32vw-150)
+      flex-basis: 50% 
+      padding-top: 102px
+      padding-right: 20px
+      padding-bottom: 50px
+      padding-left: 20px      
+      display: flex
+      align-items: center
+      flex-direction: column
+      justify-content: space-between
+      background: #f0dfd1
+    &__btn
+    &__drop
+      position: absolute
+      width: 21.3vw
+      height: 17,9vw      
+      left: 38vw
+      top: 25vw
+      z-index: 1
+    &__drops
+      position: absolute
+      left: 78%
+      top: 60%
+  &-beauty
+    padding-left: 35px
+    margin-bottom: 60px
+    display: flex
+    &__title
+      margin-bottom: -12px
+    &__text
+    &__first
+      padding-top: 70px
+      padding-right: 46px
+      padding-bottom: 40px
+      padding-left: 30px    
+      display: flex
+      flex-basis: 50%
+      align-items: center
+      flex-direction: column
+      justify-content: space-between
+    &__second
+      padding-top: 70px
+      padding-right: 70px
+      padding-bottom: 46px
+      padding-left: 70px
+    &__img
+      width: auto
+      height: auto
+      cursor: pointer
+    &__video
+      display: none
+      width: 100%
+      height: auto
+    &__btn
+      margin-left: -125px
+      &-hidden
+        display: none
+  &-together
+    display: flex
+    &__title
+      margin-bottom: 9px
+    &__text
+      width: 540px
+      padding-right: 40px
+    &__first      
+      min-width: 57.9vw
+      height: 41vw
+      object-fit: cover
+    &__second
+      padding-top: 70px
+      padding-right: 70px
+      padding-bottom: 46px
+      padding-left: 106px
+      display: flex
+      width: 36.8vw
+      flex-direction: column
+      justify-content: space-evenly      
+      background: #fcf0d5
+      transform: translate(-100px, -32px)
+      &:before
+        content: ''
+        position: absolute
+        top: 47px
+        left: 10px
+        width: 70px
+        height: 47px
+        background-image: url(../img/bc-quotes.svg)
+        background-repeat: no-repeat
+    &__img      
+      width: 100%
+      height: 100%
+    &__btn
+      margin-left: 110px      
+  &-cleansing
+    padding-left: 68px
+    margin-bottom: 79px
+    &__title      
+      margin-top: 26px
+      margin-bottom: 38px
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      padding-right: 107px
+      padding-left: 53px
+    &__card
+      width: 230px
+      padding-top: 20px
+      padding-bottom: 70px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &__label
+      margin-bottom: 8px
+      font-size: 14px
+      line-height: 24px
+      color: rgba(0, 0, 0, 0.6)
+    &__text
+      width: 230px
+      height: 120px
+      color: #000
+      font-size: 16px
+      line-height: 26px
+      margin-bottom: 10px
+    &__price
+      font-size: 18px
+      line-height: 28px
+      margin-bottom: 12px
+    &__img
+      width: 220px
+      height: 190px
+      margin-bottom: 14px
+      &-star
+        width: 13px
+        height: 12px
+  &-kit
+    display: flex
+    margin-bottom: 72px
+    &__first
+      width: 847px
+      padding-top: 20px
+      padding-right: 0px
+      padding-bottom: 35px
+      padding-left: 66px
+      background: #eeded2
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        top: 80px
+        right: 20px
+        width: 70px
+        height: 47px
+        background-image: url(../img/bc-quotes.svg)
+        background-repeat: no-repeat
+    &__second
+      max-width: 100%
+      height: 680px
+      transform: translate(0, 42px)
+      z-index: -1
+    &__title           
+      margin-bottom: 20px       
+    &__text
+      width: 632px   
+      display: inline-block
+      margin-bottom: 0
+      color: #000      
+      font-size: 22px
+      line-height: 33px
+      margin-bottom: 12px
+    &__price
+      font-weight: 700
+      font-size: 24px
+      line-height: 30px
+      margin-bottom: 10px
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__btn
+      margin-top: 30px
+      margin-left: 117px
+  &-accordeon
+    width: 549px
+    & .hr
+      width: 529px
+      margin-right: 1px
+      margin-left: 1px
+    &-top
+      width: 529px
+      text-transform: uppercase
+      padding-top: 10px
+      padding-right: 20px
+      display: flex
+      justify-content: space-between
+      font-size: 22px
+      line-height: 26px
+    &-block
+      width: 529px
+      font-size: 16px
+      line-height: 24px
+  &-box
+    &__wrapper
+      width: 100%
+      display: flex
+      justify-content: space-between
+      background-image: url(../img/bc-box__bg.jpg)      
+      background-size: 100% 100%
+    &__title
+      display: block
+      padding-top: 28px
+      padding-left: 70px
+      margin-bottom: 0px
+      background: #FBEDD3
+    &__price
+      font-weight: 700
+      font-size: 24px
+      line-height: 30px
+      margin-bottom: 12px
+    &__first
+    &__second
+      width: 100%
+      padding-top: 55px
+      padding-right: 10px
+      padding-bottom: 10px
+      padding-left: 50px
+    &__btn
+      margin-top: 35px
+      margin-left: 115px   
+    &__img 
+      width: 42vw
+      height: 31vw
+      padding-left: 8vw
+  &-topseller
+    padding-bottom: 100px    
+    position: relative
+    margin-top: -1px
+    background: #C6D4CC    
+    &__title
+      padding-left: 30px  
+      margin-top: 33px
+      margin-bottom: 70px  
+    &__text
+      min-height: 52px
+      color: #000
+    &__card
+      width: 230px
+      display: flex
+      align-items: center
+      flex-direction: column
+      justify-content: space-between
+    &__label
+      margin-bottom: 7px
+      margin-left: 75px
+      align-self: start
+      font-size: 14px
+      line-height: 24px
+      color: rgba(0, 0, 0, 0.6)
+    &__text
+      width: 230px
+      margin-bottom: 19px
+      margin-left: 75px
+      text-transform: uppercase
+      align-self: start
+      font-size: 16px
+      line-height: 26px
+    &__price
+      margin-left: 75px
+      align-self: start
+      font-size: 18px
+      line-height: 28px
+      margin-bottom: 26px
+    &__btn
+    &__stars
+      margin-left: 80px
+      align-self: start
+    &__img
+      width: 140px
+      height: auto
+      margin-bottom: 40px
+      &-star
+        width: 14px
+        height: 14px        
+        margin-right: 3px
+    & .swiper-pagination
+      display: none
+.swiper
+  &-container
+  &-slide
+  &-wrapper
+  &-button
+    &-prev
+      color: #000
+    &-next
+      color: #000
+@media (max-width: 1429px)
+  .bc
+    &-kit
+      &__first
+        width: 50vw
+        padding-left: 20px
+        padding-bottom: 20px
+        & .bc-accordeon
+          width: 95%
+          &-top
+            width: 95%
+          &-block
+            width: 95%
+          & .hr
+            width: 95%
+      &__second
+        max-width: 100%
+        height: auto
+      &__title        
+      &__text
+        width: 80%
+      &__btn
+        margin-left: 0 
+        margin: auto
+      &__img
+        height: auto
+@media (max-width: 1420px)
+  .bc
+    &-time
+      &__first
+        width: 52vw
+        height: 32vw        
+        background-size: 100% auto
+      &__second
+        height: 26.4vw
+        padding-top: 2vw
+        padding-bottom: 2vw
+      &__drop
+        width: 17vw
+        height: auto
+        top: 23vw   
+      &__drops
+        width: 17vw
+        height: auto
+        top: 27vw
+    &-beauty
+      &__first
+        width: min-content
+        padding-right: 10px
+        padding-left: 10px
+      &__second
+        padding-right: 0
+        padding-left: 0
+    &-together
+      &__text
+        width: 100%
+        padding-right: 0
+        padding-left: 0
+      &__first      
+        max-width: 50vw
+        height: auto      
+      &__second
+        width: 50vw
+        padding-right: 15px
+        padding-left: 25px
+        position: absolute
+        transform: translate(0px, 32px)        
+        right: 0px 
+        &:before
+          content: ''
+          position: absolute
+          top: 10px
+          left: 10px    
+      &__img
+    &-cleansing
+      padding-top: 100px
+    &-kit
+      &__first
+        &:after
+          top: 20px
+          right: 10px       
+    &-box
+      &__second
+        padding-right: 15px
+        padding-left: 15px
+@media (max-width: 1199px)
+  .bc
+    &-cleansing
+      &__wrapper
+        flex-wrap: wrap
+        gap: 50px
+    &-kit
+      &__first
+        &:after
+          top: 70px
+    &-box
+      &__img
+        padding-left: 0
+@media (max-width: 1059px)
+  .bc
+    &-btn
+      width: 210px
+      height: 30px
+    &-beauty
+      padding-top: 18px
+      padding-right: 0       
+      padding-bottom: 10px
+      padding-left: 0
+      margin-bottom: 11px
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      &__title
+        margin-bottom: 10px
+      &__first
+        width: 90vw
+        padding-top: 10px
+        padding-right: 10px        
+        padding-bottom: 0
+        padding-left: 10px
+        margin-bottom: 0
+      &__second
+        padding-top: 0
+        padding-right: 0        
+        padding-bottom: 20px
+        padding-left: 0
+        display: flex
+      &__btn
+        display: none
+        margin-left: 0
+        &-hidden
+          display: flex
+    &-together
+      padding-top: 10px
+      padding-right: 0px
+      padding-bottom: 0px
+      padding-left: 0px
+      margin-bottom: 0
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      &__text
+        width: 90%
+        margin-bottom: 30px
+      &__first        
+        max-width: 100%
+        height: auto
+        position: relative
+        &-part
+          width: 93%
+          height: 20px
+          left: 4%
+          top: -10px
+          background: #fcf0d5
+          position: absolute       
+      &__second
+        position: static
+        transform: translateY(-10px)
+        width: 86vw        
+        display: flex
+        align-items: center
+        padding-top: 25px
+        padding-right: 10px
+        padding-bottom: 20px
+        padding-left: 10px        
+        &:before
+          content: ''
+          position: absolute
+          top: 10px
+          left: 88%
+          width: 28px
+          background-image: url(../img/bc-quotes.svg)
+          background-repeat: no-repeat
+          background-size: contain
+      &__btn
+        margin-left: 0
+    &-cleansing
+      width: 86vw
+      transform: translateY(-11px)
+      padding-top: 26px
+      padding-right: 10px
+      padding-bottom: 10px
+      padding-left: 10px
+      margin: auto
+      margin-bottom: 40px
+      background: #fcf0d5
+      &__wrapper
+        padding-top: 10px
+        padding-right: 10px
+        padding-bottom: 10px
+        padding-left: 10px
+        gap: 20px
+        align-items: center
+        justify-content: center
+      &__title
+        margin-top: 0
+        margin-bottom: 10px
+        margin-left: 0px
+      &__text
+        margin-bottom: 20px
+      &__price
+        margin-bottom: 20px
+      &__img
+        &-star
+          margin-right: 2px
+    &-kit
+      flex-direction: column
+      margin-bottom: 37px
+      &__first
+        order: 1
+        width: 86vw
+        margin: auto
+        padding-top: 8px
+        padding-left: 20px
+        padding-bottom: 20px
+        margin-bottom: 0
+        & .bc-accordeon
+          width: 95%
+          &-top
+            width: 95%
+            font-size: 16px
+            line-height: 26px
+          &-block            
+            width: 95%
+            font-size: 16px
+            line-height: 24px
+          & .hr
+            width: 95%
+      &__second
+        order: 0
+        width: 100%
+        height: auto
+        padding-right: 0
+        padding-left: 0
+        transform: translate(0, 10px)
+        &-part
+          width: 93vw
+          height: 20px
+          left: 4%
+          top: -10px
+          background: #EEDED2
+          position: absolute 
+          z-index: 2  
+      &__title
+      &__text
+        width: 80%
+        font-size: 16px
+        line-height: 24px
+        &-hidden
+          display: none
+      &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      &__btn
+        margin-left: 0      
+        margin: auto
+    &-box
+      &__wrapper
+        padding-top: 10px
+        padding-right: 0px
+        padding-bottom: 10px
+        padding-left: 0px
+        flex-direction: column     
+        align-items: center
+        justify-content: space-between
+        background-image: url(../img/bc-box__img375.jpg)
+        background-repeat: no-repeat   
+        background-size: 100% auto
+        & .bc-accordeon
+          width: auto
+          padding-left: 30px
+          padding-right: 30px
+          &-top
+            width: auto
+            font-size: 16px
+            line-height: 26px
+          &-block
+            font-size: 16px
+            line-height: 24px
+            width: auto
+          & .hr
+            width: auto
+      &__title
+        padding-right: 38px
+        padding-left: 38px
+      &__text
+        line-height: 24px
+        padding-left: 30px
+        padding-right: 30px
+      &__price
+        padding-left: 30px
+      &__first
+        padding-top: 53vw
+      &__second
+        width: 100%
+        height: min-content
+        display: flex
+        flex-direction: column
+        padding-top: 10px
+        padding-right: 0px
+        padding-bottom: 10px
+        padding-left: 0px  
+        background: #C6D4CC
+        & .bc-mb30
+          margin-bottom: 30px
+      &__btn
+        margin-left: 0
+        margin-top: 30px
+        margin: auto
+      &__img
+        display: none
+    &-topseller
+      margin-top: -10px
+@media (max-width: 768px)
+  .bc
+    &-time    
+      width: 100%
+      flex-direction: column
+      &__title        
+        margin-bottom: 0
+      &__text
+        padding-left: 10px
+        font-size: 22px
+        line-height: 30px 
+        text-align: left   
+      &__first
+        width: 100%
+        height: 80vw
+        background-image: url(../img/bc-time__img-1-375.png)
+        background-repeat: no-repeat
+      &__second        
+        width: 100vw
+        padding: 22px 0px 20px 0
+        margin-top: -4px
+        &-wrapper
+          display: flex
+          align-items: center
+          margin-bottom: 20px
+      &__img-2
+        width: 138px
+        height: 166px
+        display: block
+        margin-left: 10px
+      &__drop
+        width: 39.3vw
+        height: auto
+        top: 1vw
+        left: -25vw
+      &__drops
+        display: block
+        width: 42.3vw
+        height: auto
+        top: 68vw
+        left: 57vw
+        z-index: 2
+@media (max-width: 681px)
+  .bc
+    &-beauty
+      &__second
+        max-width: 100%
+      &__img
+        width: 100%
+    &-kit
+      &__first:after
+        top: 20px
+        right: 20px
+        width: 28px
+        background-repeat: no-repeat
+        background-size: contain
+@media (max-width: 649px)
+  .bc
+    &-topseller
+      padding-bottom: 30px
+      &__card
+        padding-left: 0px
+      &__label
+        margin: auto
+        margin-bottom: 10px
+      &__text
+        text-align: center
+        margin: auto
+        margin-bottom: 18px
+      &__price
+        margin: auto
+        margin-bottom: 28px
+      &__stars
+        margin: auto
+      & .swiper-button-prev, .swiper-button-next
+        display: none
+      & .swiper-pagination
+        display: block
+      & .swiper-pagination-bullet   
+        width: 8px
+        height: 8px     
+        border: 2px solid #000
+        background-color: #000
+        opacity: 1
+      & .swiper-pagination-bullet-active
+        width: 8px
+        height: 8px     
+        border: 2px solid #000
+        background-color: #C6D4CC
+@media (max-width: 424px)
+  .bc
+    &-kit
+      &__first:after
+        top: 90px
+        right: 10px
+@media (max-width: 375px)
+  .bc
+    &-kit
+      &__first:after
+        top: 10px
+        right: 0px
+@media (max-width: 424px)
+  .bc
+    &-kit
+      &__title:after
+        top: 0px
+@media (min-width: 992px)
+  .bc-btn:hover
+    background: #616267
+    transition-duration: .3s ease-in-out
+    color: #000
+@media (min-width: 1441px)
+  .bc
+    &-time
+      &__first
+        // width: 100%
+        background-size: cover
+      &__second
+        // width: 100%
+      
+
+
+      // display: none
