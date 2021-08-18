@@ -681,7 +681,7 @@ body {
 @media (max-width: 1059px) {
   .bc-btn {
     width: 210px;
-    height: 30px;
+    height: 50px;
   }
   .bc-beauty {
     padding-top: 18px;
@@ -1076,20 +1076,13 @@ body {
     padding-left: 0px;
   }
   .bc-topseller__label {
-    margin: auto;
     margin-bottom: 10px;
   }
   .bc-topseller__text {
-    text-align: center;
-    margin: auto;
     margin-bottom: 18px;
   }
   .bc-topseller__price {
-    margin: auto;
     margin-bottom: 28px;
-  }
-  .bc-topseller__stars {
-    margin: auto;
   }
   .bc-topseller .swiper-button-prev,
   .bc-topseller .swiper-button-next {
