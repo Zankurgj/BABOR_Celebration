@@ -501,7 +501,7 @@ body {
 .bc-topseller-slider-container {
   position: relative;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1820px;
   padding: 0 60px;
 }
 .bc-topseller__text {
@@ -518,9 +518,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   max-width: 230px;
-  -webkit-box-align: center;
+  /* -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: center; */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -530,7 +530,7 @@ body {
   justify-content: space-between;
 }
 .bc-topseller__btn {
-  width: 100%;
+  align-self: flex-start;
 }
 .bc-topseller__label {
   margin-bottom: 7px;
@@ -773,7 +773,7 @@ body {
   .bc-together__second {
     position: static;
     width: 100%;
-    transform: translate(0,0);
+    transform: translate(0, 0);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1001,7 +1001,7 @@ body {
     line-height: 30px;
     text-align: left;
   }
-  .bc-time__first-col{
+  .bc-time__first-col {
     max-width: 100%;
     flex-basis: 100%;
   }
@@ -1056,7 +1056,7 @@ body {
   .bc-kit__title {
     padding-right: 50px;
   }
-  .bc-kit__title::after{
+  .bc-kit__title::after {
     top: 0;
     bottom: auto;
     right: 20px;
